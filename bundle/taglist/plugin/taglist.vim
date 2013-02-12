@@ -1549,9 +1549,9 @@ function! s:Tlist_Window_Init()
 
     " Create buffer local mappings for jumping to the tags and sorting the list
     nnoremap <buffer> <silent> <CR>
-                \ :call <SID>Tlist_Window_Jump_To_Tag('useopen')<CR>
-    nnoremap <buffer> <silent> o
                 \ :call <SID>Tlist_Window_Jump_To_Tag('newwin')<CR>
+    nnoremap <buffer> <silent> o
+                \ :call <SID>Tlist_Window_Jump_To_Tag('useopen')<CR>
     nnoremap <buffer> <silent> p
                 \ :call <SID>Tlist_Window_Jump_To_Tag('preview')<CR>
     nnoremap <buffer> <silent> P

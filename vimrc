@@ -10,7 +10,7 @@ set ruler
 set nu
 
 " Always show the status line
-set laststatus=2
+set laststatus=1
 
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
@@ -44,7 +44,7 @@ colorscheme desert
 set guifont=Courier_New:h10
 
 " File type and unicoding
-set encoding=utf-8 
+set encoding=utf-8
 set fileencodings=ucs-bom,utf-8,cp936
 set ffs=unix,dos,mac
 
@@ -71,6 +71,7 @@ set wrap
 set autoindent
 set smartindent
 
+" show special mark
 set list
 
 
@@ -89,7 +90,7 @@ if has('win32')
     set guioptions-=r
     set guioptions-=L
     set gcr=a:block-blinkon0
-    
+
     " fix garbage code on menu and console
     source $VIMRUNTIME/delmenu.vim
     source $VIMRUNTIME/menu.vim
@@ -102,9 +103,9 @@ call pathogen#infect()
 
 
 """""""""""""""" ctags and taglist """""""""""""
-if has('win32')    
+if has('win32')
     let Tlist_Ctags_Cmd = 'ctags'
-else              
+else
     let Tlist_Ctags_Cmd = '/usr/bin/ctags'
 endif
 
@@ -113,8 +114,9 @@ let Tlist_Exit_OnlyWindow=1
 let Tlist_Use_Right_Window = 1
 let Tlist_File_Fold_Auto_Close=1
 let Tlist_Sort_Type='name'
+
 " let Tlist_Close_On_Select=1
-nmap tl :TlistToggle<CR>
+nmap <F2> :TlistToggle<CR>
 
 
 """"""""""""" nerdtree """""""""""""""""""""
